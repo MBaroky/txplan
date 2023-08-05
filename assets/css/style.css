@@ -42,6 +42,24 @@ h2 {
 
 /* utils */
 
+.inner-shadow {
+  /*position: relative;*/
+  /*isolation: isolate;*/
+}
+
+.inner-shadow::before {
+  content: "";
+  width: 100%;
+  height: 160px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(0, 50%);
+  background-image: -webkit-linear-gradient( 180deg, transparent 0%, var(--shadow-color) 40%, var(--shadow-color) 70%, transparent 100%);
+  background-image: linear-gradient( 180deg, transparent 0%, var(--shadow-color) 40%, var(--shadow-color) 70%, transparent 100%);
+  z-index: -1;
+}
+
 .curved-connector, .gradient-background {
   position: relative;
   isolation: isolate;
@@ -112,21 +130,20 @@ h2 {
 
 /* cover */
 
-.cover-row::before {
-  content: "";
-  width: 100%;
-  height: 80px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-image: -webkit-linear-gradient( 180deg, transparent 0%, var(--grad-green-4) 100%);
-  background-image: linear-gradient( 180deg, transparent 0%, var(--grad-green-3) 100%);
-  z-index: -1;
+#cover {
+  --grad-start: var(--grad-green-3);
+  --grad-end: var(--grad-green-4);
+  z-index: 1;
+}
+
+.cover-row {
+  --shadow-color: var(--grad-green-3);
 }
 
 .gradient-circle {
   position: relative;
   isolation: isolate;
+  z-index: 50;
 }
 
 @media (min-width: 768px) {
@@ -171,12 +188,6 @@ h2 {
 }
 
 /* section 1 */
-
-#section-1 {
-  --grad-start: var(--grad-green-3);
-  --grad-end: var(--grad-green-4);
-  z-index: 10;
-}
 
 .white-circle-wrapper {
   min-height: 250px;
