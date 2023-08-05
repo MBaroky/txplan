@@ -1,0 +1,31 @@
+#freepik--tooth--inject-3_43 {
+  opacity: 0;
+  transform: translate(0%, -20%);
+  transition: all 650ms ease-in-out 150ms;
+}
+
+#freepik--speech-bubble-2--inject-3_22 {
+  opacity: 0;
+  transition: all 450ms ease-in-out 300ms;
+}
+
+.aos-animate #freepik--speech-bubble-2--inject-3_22 {
+  opacity: 1;
+}
+
+.aos-animate #freepik--tooth--inject-3_43 {
+  opacity: 1;
+  transform: translate(0%, 0%);
+}
+
+#freepik--speech-bubble-1--inject-3_26 {
+  opacity: 0;
+  transform: translate(0%, 20%);
+  transition: all 650ms ease-in-out 600ms;
+}
+
+.aos-animate #freepik--speech-bubble-1--inject-3_26 {
+  opacity: 1;
+  transform: translate(0%, 0%);
+}
+

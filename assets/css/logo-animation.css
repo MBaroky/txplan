@@ -1,0 +1,82 @@
+:root {
+  --delay-margin: 0.3s;
+}
+
+/* animation keyframes */
+
+/* stroke animation */
+
+@keyframes animate-svg-stroke {
+  0% {
+    stroke-dashoffset: 550px;
+    stroke-dasharray: 550px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 550px;
+  }
+}
+
+/* fill animation */
+
+@keyframes animate-svg-fill {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: var(--st0-fill);
+  }
+}
+
+/* fill animation */
+
+@keyframes animate-svg-position {
+  0% {
+    transform: var(--transform-start);
+  }
+}
+
+.svg-elem-1 {
+  --st0-fill: #2AB956;
+  --transform-start: translate(9%, -15%);
+  -webkit-animation: animate-svg-fill 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both, animate-svg-position 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
+  animation: animate-svg-fill 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both, animate-svg-position 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
+}
+
+.svg-elem-2 {
+  --st0-fill: #74DD66;
+  --transform-start: translate(-9%, 15%);
+  -webkit-animation: animate-svg-fill 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both, animate-svg-position 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
+  animation: animate-svg-fill 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both, animate-svg-position 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
+}
+
+.svg-elem-4 {
+  -webkit-animation: animate-svg-stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+  animation: animate-svg-stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+}
+
+.svg-elem-5 {
+  -webkit-animation: animate-svg-stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) var(--delay-margin) both;
+  animation: animate-svg-stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) var(--delay-margin) both;
+}
+
+.svg-elem-6 {
+  -webkit-animation: animate-svg-stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) calc(var(--delay-margin) *2 ) both;
+  animation: animate-svg-stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) calc(var(--delay-margin) *2 ) both;
+}
+
+.svg-elem-7 {
+  -webkit-animation: animate-svg-stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) calc(var(--delay-margin) *3 ) both;
+  animation: animate-svg-stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) calc(var(--delay-margin) *3 ) both;
+}
+
+.svg-elem-8 {
+  -webkit-animation: animate-svg-stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) calc(var(--delay-margin) *4 ) both;
+  animation: animate-svg-stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) calc(var(--delay-margin) *4 ) both;
+}
+
+.svg-elem-9 {
+  -webkit-animation: animate-svg-stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) calc(var(--delay-margin) *5 ) both;
+  animation: animate-svg-stroke 1s cubic-bezier(0.47, 0, 0.745, 0.715) calc(var(--delay-margin) *5 ) both;
+}
+
