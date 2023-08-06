@@ -48,14 +48,28 @@
     speed: -4,
     center: true,
   });
-    const sectionHeight = document.getElementById("section-4");
-    const getSectionHeight = () =>{
-        return document.getElementById("bullets").clientHeight
-    }
-    window.addEventListener("resize", ()=>{
-        sectionHeight.style.minHeight= getSectionHeight() + "px"
-    })
-    window.addEventListener("load", ()=>{
-        sectionHeight.style.minHeight= getSectionHeight() + "px"
-    })
+  const sectionHeight = document.getElementById("section-4");
+  const getSectionHeight = () => {
+    return document.getElementById("bullets").clientHeight;
+  };
+  window.addEventListener("resize", () => {
+    sectionHeight.style.minHeight = getSectionHeight() + "px";
+  });
+  window.addEventListener("load", () => {
+    sectionHeight.style.minHeight = getSectionHeight() + "px";
+  });
+
+  // set target for mouse event
+  const target = document.getElementById("cover");
+  target.addEventListener("mousemove", parallax);
+  function parallax(event) {
+    // target.addEventListener("mousemove", parallax);
+    target.querySelectorAll(".mouse").forEach(shift => {
+      const position = shift.getAttribute("value");
+      const x = (window.innerWidth - event.pageX * position) / 90;
+      const y = (window.innerHeight - event.pageY * position) / 90;
+
+      shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    });
+  }
 })(); // End of use strict
