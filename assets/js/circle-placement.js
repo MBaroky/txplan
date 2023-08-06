@@ -29,10 +29,10 @@
             correctX - x
           )}px,0)`;
         }
-        console.log(radius);
-        console.log(
-          `x-${index}: ${x}, y-${index}: ${y} x should be: ${correctX}`
-        );
+        // console.log(radius);
+        // console.log(
+        //   `x-${index}: ${x}, y-${index}: ${y} x should be: ${correctX}`
+        // );
       });
   };
   window.addEventListener("load", () => {

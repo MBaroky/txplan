@@ -16,9 +16,10 @@
   --h6-before-line: 3rem;
 }
 
-body {
+/* body {
   overflow-x: hidden;
-}
+} */
+
 
 .spacer-1 {
   padding-bottom: 60%;
@@ -146,6 +147,12 @@ h2 {
   background-color: var(--grad-end);
   z-index: -2;
   transform: translate(-50%, 50%);
+}
+
+/* horizontal scroll fix */
+
+.curved-connector{
+  overflow-x: clip;
 }
 
 [class*="overlay-"] {
