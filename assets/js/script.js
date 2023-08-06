@@ -48,4 +48,14 @@
     speed: -4,
     center: true,
   });
+    const sectionHeight = document.getElementById("section-4");
+    const getSectionHeight = () =>{
+        return document.getElementById("bullets").clientHeight
+    }
+    window.addEventListener("resize", ()=>{
+        sectionHeight.style.minHeight= getSectionHeight() + "px"
+    })
+    window.addEventListener("load", ()=>{
+        sectionHeight.style.minHeight= getSectionHeight() + "px"
+    })
 })(); // End of use strict
