@@ -61,15 +61,27 @@
 
   // set target for mouse event
   const target = document.getElementById("cover");
-  target.addEventListener("mousemove", parallax);
-  function parallax(event) {
-    // target.addEventListener("mousemove", parallax);
-    target.querySelectorAll(".mouse").forEach(shift => {
-      const position = shift.getAttribute("value");
-      const x = (window.innerWidth - event.pageX * position) / 90;
-      const y = (window.innerHeight - event.pageY * position) / 90;
 
-      shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
-    });
+  // listening to mouse movement
+  target.addEventListener("mousemove", parallax);
+
+  // changing element accordingly
+  function parallax(event) {
+    // run only on desktop
+    var hasTouchScreen = false;
+
+    if ("maxTouchPoints" in navigator) {
+      hasTouchScreen = navigator.maxTouchPoints > 0;
+    }
+
+    if (!hasTouchScreen) {
+      target.querySelectorAll(".mouse").forEach(shift => {
+        const position = shift.getAttribute("value");
+        const x = (window.innerWidth - event.pageX * position) / 90;
+        const y = (window.innerHeight - event.pageY * position) / 90;
+
+        shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+      });
+    }
   }
 })(); // End of use strict
