@@ -338,7 +338,7 @@ h2 {
 #section-3 {
   --grad-start: var(--grad-green-4);
   --grad-end: var(--grad-green-3);
-  z-index: 2;
+  z-index: 20;
 }
 
 #section-3 .container:first-child {
