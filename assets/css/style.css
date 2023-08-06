@@ -16,9 +16,7 @@
   --h6-before-line: 3rem;
 }
 
-/* body {
-  overflow-x: hidden;
-} */
+/* overwrites and globals*/
 
 
 .spacer-1 {
@@ -42,6 +40,13 @@ h2 {
   font-family: 'Oswald';
   font-weight: 700;
   text-transform: none;
+}
+
+@media (min-width: 992px){
+
+  #mainNav .nav-link.active {
+      background-color: rgba(255,255,255,0) !important;
+  }
 }
 
 /* utils */
@@ -183,6 +188,15 @@ h2 {
 
 #mainNav a:hover {
   color: var(--logo-green-2);
+}
+
+@media (min-width: 992px) {
+  #mainNav:not(.navbar-shrink) svg .st0,
+  #mainNav:not(.navbar-shrink) svg .st1{
+    --st0-fill: var(--white-main);
+    --st1-fill: var(--white-main);
+    fill:var(--white-main)
+  }
 }
 
 #mainNav.navbar-shrink svg .st2 {
