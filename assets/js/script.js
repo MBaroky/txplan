@@ -47,7 +47,10 @@
   var rellax = new Rellax(".rellax", {
     speed: -4,
     center: true,
+    breakpoints: [576, 768, 1201],
   });
+
+  // setting height for section-4
   const sectionHeight = document.getElementById("section-4");
   const getSectionHeight = () => {
     return document.getElementById("bullets").clientHeight;
