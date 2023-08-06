@@ -1,4 +1,8 @@
 ## Note
 
-**Run in localhost server to review to avoid resources loading error**
-[Preview at:](https://txplan.netlify.app/)
+**Run in localhost server for previewing to avoid resources loading
+error**
+
+## Demo at:
+
+[Netlify](https://txplan.netlify.app/)
